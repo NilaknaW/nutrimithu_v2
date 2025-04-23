@@ -1,0 +1,6 @@
+﻿"bl1"=90
+"D1@Sketch1"="bl1"
+"bw1"=70
+"D2@Sketch1"="bw1"
+"D2@Sketch2"="bw1"+10
+"D1@Sketch2"="bl1"+10

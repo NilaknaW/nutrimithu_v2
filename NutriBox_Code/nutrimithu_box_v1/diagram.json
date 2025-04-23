@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "author": "Nilakna Warushavithana",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+      {
+        "type": "wokwi-hx711",
+        "id": "cell1",
+        "top": 60.2,
+        "left": -199,
+        "attrs": { "type": "5kg" }
+      },
+      {
+        "type": "board-ssd1306",
+        "id": "oled1",
+        "top": 108.74,
+        "left": 153.83,
+        "attrs": { "i2cAddress": "0x3c" }
+      }
+    ],
+    "connections": [
+      [ "esp:TX", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX", "$serialMonitor:TX", "", [] ],
+      [ "cell1:GND", "esp:CMD", "black", [ "h-19.2", "v76.5" ] ],
+      [ "cell1:VCC", "esp:3V3", "red", [ "h-9.6", "v86.4" ] ],
+      [ "cell1:SCK", "esp:12", "green", [ "h-28.8", "v47.2" ] ],
+      [ "cell1:DT", "esp:13", "green", [ "h-38.4", "v66.7" ] ],
+      [ "oled1:SDA", "esp:21", "green", [ "v0" ] ],
+      [ "oled1:SCL", "esp:22", "green", [ "v0" ] ],
+      [ "esp:GND.2", "oled1:GND", "black", [ "v0", "h81.64" ] ],
+      [ "oled1:VCC", "esp:3V3", "red", [ "v-124.8", "h-191.85" ] ]
+    ],
+    "dependencies": {}
+  }
